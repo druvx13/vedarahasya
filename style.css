@@ -1,0 +1,240 @@
+/* ============================================================
+   VedaRahasya.Net — Responsive Stylesheet
+   Preserves the traditional aesthetic while adding full
+   mobile-optimisation and modern layout.
+   ============================================================ */
+
+/* ---- Reset & Box Model ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ---- Base ---- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #ffffcc;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #0000cc;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+/* ---- Links ---- */
+a:link {
+  color: #0000cc;
+}
+
+a:visited {
+  color: #0000aa;
+}
+
+a:hover {
+  color: #cc0000;
+  text-decoration: none;
+}
+
+a:active {
+  color: #cc0000;
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* ---- Responsive Tables ---- */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Prevent fixed pixel widths from overflowing the viewport */
+table[width],
+td[width],
+th[width] {
+  max-width: 100%;
+}
+
+td, th {
+  padding: 4px 8px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tables that act as page layout wrappers — make them fluid */
+table[border="0"][width],
+table[border="6"],
+table[border="3"],
+table[border="1"] {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+/* Outer wrapper centering: keep centered but fluid */
+center {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* ---- Page Wrapper ---- */
+/* All pages get a max-width container via the body padding rules above.
+   Inner content already lives inside <center> or table wrappers. */
+
+/* ---- Forms ---- */
+form {
+  max-width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  max-width: 100%;
+  font-size: 1em;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+/* ---- Horizontal Rules ---- */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 12px 0;
+}
+
+/* ---- Utility ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ============================================================
+   Mobile — small screens (≤ 640 px)
+   ============================================================ */
+@media (max-width: 640px) {
+
+  body {
+    padding: 6px 8px;
+    font-size: 15px;
+  }
+
+  /* Make layout tables scroll horizontally instead of breaking */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Restore table semantics for actual data/content tables so rows still
+     stack inside the scrolling container */
+  table tbody,
+  table tr,
+  table td,
+  table th {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    text-align: left !important;
+  }
+
+  /* Navigation cells: let them stack and be readable */
+  td[width], th[width] {
+    width: 100% !important;
+  }
+
+  /* Headings scale down slightly */
+  h1 { font-size: 1.3em; }
+  h2 { font-size: 1.15em; }
+
+  /* Gallery images: a bit smaller on mobile */
+  p[align="center"] img,
+  td img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Input fields go full-width */
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   Tablet — medium screens (641 px – 900 px)
+   ============================================================ */
+@media (min-width: 641px) and (max-width: 900px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  table[width],
+  table[border="0"][width],
+  table[border="6"],
+  table[border="3"],
+  table[border="1"] {
+    width: 100% !important;
+  }
+}
+
+/* ============================================================
+   Print
+   ============================================================ */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 4in;
+  }
+}
