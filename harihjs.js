@@ -59,8 +59,10 @@
 })();
 
 // Right-click protection (modernized)
+/*
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
     alert("Sorry! This function is disabled in my site..");
     return false;
-});
+});*/
+
