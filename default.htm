@@ -4,153 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to VedaRahasya.Net</title>
-    
+    <link rel="stylesheet" href="styles.css">
     <style>
-        *, *::before, *::after {
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        
-        body {
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0 8px;
-            background-color: #ffffcc;
-        }
-        
-        a:link {
-            color: blue;
-            font-family: "MS Sans Serif", sans-serif;
-        }
-        
-        a:hover {
-            text-decoration: none;
-            color: red;
-            font-family: "MS Sans Serif", sans-serif;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        table {
-            max-width: 100%;
-        }
+        .hero { text-align: center; padding: 20px 16px 10px; }
+        .hero img { height: 72px; width: auto; vertical-align: middle; margin: 0 12px; }
+        .hero h2 { display: inline; font-size: clamp(1.1rem,4vw,1.5rem); vertical-align: middle; color: #1a237e; }
+        .intro-text { max-width: 760px; margin: 16px auto; font-size: .97rem; text-align: justify; }
+        .featured-links { background: #fff; border: 1px solid #c5cae9; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px; }
+        .featured-links a { display: block; padding: 6px 0; font-family: sans-serif; font-size: .92rem; color: #1565c0; border-bottom: 1px solid #f0f0e0; }
+        .featured-links a:last-child { border-bottom: none; }
+        .featured-links a:hover { color: #b71c1c; text-decoration: none; }
+        .new-badge { display: inline-block; background: #e53935; color: #fff; font-size: .65rem; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: bold; }
     </style>
-    
-    <script>
-        function openAward() {
-            var myAward = window.open('', "Award", "width=440,height=255,scrollbars=yes");
-            myAward.focus();
-            myAward.document.location.href = "myaward.htm";
-        }
-    </script>
 </head>
+<body>
+    <header class="site-header">
+        <h1>VedaRahasya.Net</h1>
+        <p class="tagline">A portal on Hinduism &mdash; Vedas, Upanishads &amp; Sacred Scriptures</p>
+    </header>
 
-<body link="#0000ff" vlink="#0000ff">
+    <nav class="site-nav">
+        <a href="vedbk.htm">Veda Rahasya</a>
+        <a href="vedas.htm">Upanishad Saaram</a>
+        <a href="imggal.htm">Image Gallery</a>
+        <a href="photos.htm">Photo Gallery</a>
+        <a href="links.htm">Hinduism Links</a>
+        <a href="contact.htm">Contact</a>
+    </nav>
+
+    <div class="content">
+        <div class="hero">
+            <img src="images/om1.gif" alt="Om symbol">
+            <h2>Welcome to VedaRahasya.Net!</h2>
+            <img src="images/giftest2.gif" alt="Animated symbol">
+        </div>
+
+        <p class="intro-text">
+            This personal portal contains articles on Sri Maha Perival, translations of prime Vedic
+            scriptures, rare photographs and interesting links to other sites about Hindu Religion and
+            Vedas. Click a link below to continue&hellip;
+        </p>
+
+        <div class="nav-grid">
+            <div class="nav-card">
+                <a href="vedbk.htm">Veda Rahasya</a>
+                <a href="vedas.htm">Upanishad Saaram <span class="new-badge">UPD</span></a>
+                <a href="kanstotr.htm">Kanaka Dhara Stotram</a>
+            </div>
+            <div class="nav-card">
+                <a href="namonama.htm">Sri Perival&rsquo;s Article</a>
+                <a href="perival.htm">The <em>Dasa-Upadesam</em></a>
+                <a href="tamilart.htm">Religious Articles in Tamil</a>
+            </div>
+            <div class="nav-card">
+                <a href="imggal.htm">Hinduism Image Gallery</a>
+                <a href="ssaver.htm">Download Religious Screen Savers</a>
+                <a href="sivam.htm">e-book on 108 Siva Temples</a>
+            </div>
+            <div class="nav-card">
+                <a href="links.htm">Other Hinduism Links</a>
+                <a href="jyotir.htm">Jyotirlingas &mdash; Information</a>
+                <a href="cwords/wordfind.htm">Hinduism Crosswords</a>
+            </div>
+        </div>
+
+        <div class="featured-links">
+            <a href="shakti.htm">Download an ebook on the 51 Shakti Peethas</a>
+            <a href="manu0.htm">Read translation of Manu Dharma &mdash; the prime Hindu scripture</a>
+            <a href="docs/Ganesha.pdf">Download a Tamil e-book for Ganesh Chaturthi (Stotram &amp; Pooja Vidanam)</a>
+            <a href="ratna/intro.htm">Translation of <em>Prasnottara Ratna Maalika</em> of Sri Adi Sankara</a>
+            <a href="http://www.Guhananda.Net/" target="_blank" rel="noopener">Visit www.Guhananda.Net &mdash; dedicated to Guru Guhananda
+                <img src="images/aninew.gif" alt="New" style="height:16px;vertical-align:middle;margin-left:4px;"></a>
+            <a href="http://www.periva.org" target="_blank" rel="noopener"><strong>Visit www.periva.org &mdash; dedicated to Sri Maha Periva of Kanchi Kamakoti Peetam</strong>
+                <img src="images/aninew.gif" alt="New" style="height:16px;vertical-align:middle;margin-left:4px;"></a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        This portal on Hinduism is the creation of
+        <a href="http://www.hari.ws/" target="_blank" rel="noopener">P.K. Hari Hara Subramanian</a>.
+        Send feedback by clicking <a href="contact.htm">here</a>.
+    </footer>
+
     <script src="harihjs.js"></script>
-    
-    <center>
-        <table border="0" width="100%" style="max-width: 720px;">
-            <tr>
-                <td>
-                    <center>
-                        <b>
-                            <font face="Arial, Helvetica, sans-serif" color="#0000ff" size="2">
-                                Welcome to VedaRahasya.Net!
-                            </font>
-                        </b>
-                    </center>
-                    <br>
-                    <center>
-                        <img src="images/giftest2.gif" width="70" height="80" alt="GIF image" style="max-width: 100%; height: auto;">
-                    </center>
-                </td>
-            </tr>
-        </table>
-    </center>
-    
-    <center>
-        <font size="2">
-            <p align="justify" style="max-width: 720px;">
-                This personal portal contains a few articles of Sri Maha Perival, translations of prime Vedic scriptures, 
-                some rare photographs, and a few interesting links to other sites on the Internet about Hindu Religion 
-                and Vedas. Click a link below to continue...
-            </p>
-        </font>
-    </center>
-    
-    <br>
-    
-    <center>
-        <table width="100%" border="6" bordercolor="gray" style="max-width: 740px;">
-            <tr>
-                <td width="25%">
-                    <center>
-                        <font face="MS Sans Serif, sans-serif" size="1" color="#0000cc">
-                            <a href="vedbk.htm">Veda Rahasya</a><br><br>
-                            <a href="vedas.htm">Upanishad Saaram <img border="0" height="13" src="images/aniupd.gif" alt=""></a><br><br>
-                            <a href="kanstotr.htm">Kanaka Dhara Stotram</a>
-                        </font>
-                    </center>
-                </td>
-                
-                <td width="20%">
-                    <font face="MS Sans Serif, sans-serif" size="1" color="#0000cc">
-                        <center>
-                            <a href="namonama.htm">Sri Perival's Article</a><br><br>
-                            <a href="perival.htm">The <i>Dasa-Upadesam</i></a><br><br>
-                            <a href="tamilart.htm">Religious Articles in Tamil</a>
-                        </center>
-                    </font>
-                </td>
-                
-                <td width="35%">
-                    <font face="MS Sans Serif, sans-serif" size="1" color="#0000cc">
-                        <center>
-                            <a href="imggal.htm">Hinduism related Image Gallery</a><br><br>
-                            <a href="ssaver.htm">Download 2 Best Religious Screen Savers</a><br><br>
-                            <a href="sivam.htm">Download an e-book on 108 Siva Temples</a>
-                        </center>
-                    </font>
-                </td>
-                
-                <td align="center">
-                    <font face="MS Sans Serif, sans-serif" size="1" color="#0000cc">
-                        <a href="links.htm">Other Hinduism links</a><br><br>
-                        <a href="jyotir.htm">Jyotirlingas - Information</a><br><br>
-                        <a href="cwords/wordfind.htm">Hinduism related Crosswords</a>
-                    </font>
-                </td>
-            </tr>
-            
-            <tr>
-                <td colspan="4" align="center">
-                    <font face="MS Sans Serif, sans-serif" size="1" color="#0000cc">
-                        <br>
-                        <a href="shakti.htm">Click here to download an ebook on the 51 Shakti Peethas</a><br><br>
-                        <a href="manu0.htm">Click here to read translation of Manu Dharma - the prime script of Hindus</a><br><br>
-                        <a href="docs/Ganesha.pdf">Download a Tamil e-book for Ganesh Chaturthi - Stotram and Pooja Vidanam included</a><br><br>
-                        <a href="ratna/intro.htm">Translation of <i>Prasnottara Ratna Maalika</i> - of Sri Adi Sankara - Part of the Translation series</a><br><br>
-                        <a href="http://www.Guhananda.Net/" target="_blank">Visit www.Guhananda.Net - our group site dedicated to Guru Guhananda (has lot of audio content)</a><br><br>
-                        <img border="0" height="20" src="images/aninew.gif" alt="">
-                        <a href="http://www.periva.org" target="_blank"><b>Visit our new website www.periva.org - dedicated to Sri Maha Periva of Kanchi Kamakoti Peetam</b></a>
-                        <img border="0" height="20" src="images/aninew.gif" alt="">
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-    
-    <center>
-        <font size="2">
-            This portal on Hinduism is the creation of 
-            <a href="http://www.hari.ws/" target="_blank"><font color="black">P.K. Hari Hara Subramanian</font></a>. 
-            Send in your feedback by clicking 
-            <a href="contact.htm"><font color="black">here</font></a>
-            <br>
-        </font>
-    </center>
 </body>
 </html>

@@ -1,0 +1,329 @@
+/* VedaRahasya.Net - Shared Responsive Stylesheet */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fffde7;
+    color: #1a1a1a;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ── Typography ────────────────────────────────────────── */
+
+h1, h2, h3, h4 {
+    font-family: Georgia, serif;
+    color: #1a237e;
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 0.75em 0;
+}
+
+/* ── Links ──────────────────────────────────────────────── */
+
+a:link, a:visited {
+    color: #1565c0;
+    text-decoration: underline;
+    font-family: inherit;
+}
+
+a:hover, a:focus {
+    color: #b71c1c;
+    text-decoration: none;
+    outline: 2px solid transparent;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+.page-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ── Site Header ─────────────────────────────────────────── */
+
+.site-header {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+    color: #fff;
+    padding: 18px 16px 12px;
+    text-align: center;
+}
+
+.site-header h1 {
+    color: #fff;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    margin: 0 0 4px;
+    letter-spacing: 0.03em;
+}
+
+.site-header .tagline {
+    color: #c5cae9;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ── Site Nav ────────────────────────────────────────────── */
+
+.site-nav {
+    background-color: #283593;
+    padding: 6px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    justify-content: center;
+}
+
+.site-nav a {
+    color: #e8eaf6;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+    padding: 4px 6px;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.site-nav a:hover, .site-nav a:focus {
+    background-color: #3949ab;
+    color: #fff;
+}
+
+/* ── Main Content ────────────────────────────────────────── */
+
+.content {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* ── Section / Card ──────────────────────────────────────── */
+
+.section {
+    background: #fff;
+    border: 1px solid #e0e0c8;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.section h2 {
+    font-size: 1.15rem;
+    border-bottom: 2px solid #e8eaf6;
+    padding-bottom: 6px;
+    margin-top: 0;
+}
+
+.section h3 {
+    font-size: 1rem;
+    color: #283593;
+    margin: 1em 0 0.4em;
+}
+
+/* ── Grid: nav cards on home page ────────────────────────── */
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.nav-card {
+    background: #fff;
+    border: 1px solid #c5cae9;
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.nav-card:hover {
+    box-shadow: 0 3px 10px rgba(26,35,126,0.15);
+    border-color: #9fa8da;
+}
+
+.nav-card a {
+    display: block;
+    color: #1a237e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    line-height: 1.4;
+    padding: 4px 0;
+}
+
+.nav-card a:hover {
+    color: #b71c1c;
+}
+
+/* ── Link List ───────────────────────────────────────────── */
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5e8;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+}
+
+.link-list li:last-child {
+    border-bottom: none;
+}
+
+.link-list a {
+    color: #1565c0;
+    font-family: inherit;
+}
+
+/* ── Tables ──────────────────────────────────────────────── */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+/* Legacy content tables */
+table[border] td,
+table[border] th {
+    padding: 6px 8px;
+    vertical-align: top;
+}
+
+/* ── Images ──────────────────────────────────────────────── */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/* photo gallery thumbnail grid */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.photo-grid a img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid #c5cae9;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.photo-grid a:hover img {
+    border-color: #1a237e;
+    transform: scale(1.04);
+}
+
+/* ── Article / Scripture text ────────────────────────────── */
+
+.scripture-text {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: justify;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.scripture-text p {
+    margin: 1em 0;
+}
+
+.scripture-title {
+    text-align: center;
+    color: #b71c1c;
+    font-size: 1.25rem;
+    margin: 0 0 0.5em;
+}
+
+/* ── Back / Nav links ────────────────────────────────────── */
+
+.back-link {
+    text-align: center;
+    margin: 20px 0 8px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.back-link a {
+    background: #e8eaf6;
+    color: #1a237e;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid #9fa8da;
+    transition: background 0.2s;
+}
+
+.back-link a:hover {
+    background: #c5cae9;
+    color: #0d0d6e;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.site-footer {
+    background-color: #283593;
+    color: #c5cae9;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 0.82rem;
+    font-family: sans-serif;
+    margin-top: 32px;
+}
+
+.site-footer a {
+    color: #e8eaf6;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
+/* ── Utility ─────────────────────────────────────────────── */
+
+.center { text-align: center; }
+.text-blue { color: #1a237e; }
+.text-small { font-size: 0.82rem; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+    .site-header h1 { font-size: 1.3rem; }
+    .section { padding: 14px 12px; }
+    .nav-grid { grid-template-columns: 1fr 1fr; }
+    .content { padding: 0 8px; }
+    table[border] { display: block; overflow-x: auto; }
+}
+
+@media (max-width: 400px) {
+    .nav-grid { grid-template-columns: 1fr; }
+}

@@ -1,55 +1,98 @@
-<html>
-<HEAD>
-<meta charset="utf-8">
-<TITLE>Welcome to Hari's Portal - Feedback Form</TITLE>
-<STYLE>
-  A:hover { text-decoration: none;
-	color: red;
-	font-family: Times New Roman }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback &mdash; VedaRahasya.Net</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .feedback-form label {
+            display: block;
+            font-family: sans-serif;
+            font-size: .9rem;
+            font-weight: bold;
+            color: #1a237e;
+            margin-top: 14px;
+            margin-bottom: 4px;
+        }
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #9fa8da;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: .95rem;
+            background: #fafafa;
+            box-sizing: border-box;
+        }
+        .feedback-form textarea { min-height: 120px; resize: vertical; }
+        .feedback-form .radio-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; font-family: sans-serif; font-size: .9rem; }
+        .feedback-form .radio-group label { font-weight: normal; margin: 0; display: flex; align-items: center; gap: 5px; color: #1a1a1a; }
+        .feedback-form .btn-row { margin-top: 16px; display: flex; gap: 10px; }
+        .feedback-form button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: .9rem;
+            cursor: pointer;
+        }
+        .feedback-form button[type="submit"] { background: #1a237e; color: #fff; }
+        .feedback-form button[type="submit"]:hover { background: #283593; }
+        .feedback-form button[type="reset"] { background: #e0e0e0; color: #333; }
+        .feedback-form button[type="reset"]:hover { background: #bdbdbd; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1>VedaRahasya.Net</h1>
+        <p class="tagline">A portal on Hinduism &mdash; Vedas, Upanishads &amp; Sacred Scriptures</p>
+    </header>
+    <nav class="site-nav">
+        <a href="default.htm">Home</a>
+        <a href="vedbk.htm">Veda Rahasya</a>
+        <a href="vedas.htm">Upanishad Saaram</a>
+        <a href="links.htm">Hinduism Links</a>
+        <a href="contact.htm">Contact</a>
+    </nav>
 
-  A:link { ;
-	color: blue;
-	font-family: Times New Roman }
-</STYLE>
-</HEAD>
-<BODY LINK="#0000ff" VLINK="#0000ff" bgcolor=#ffffcc bgProperties=fixed>
-<script language="JavaScript" src="harihjs.js"></script>
-<P><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"></P>
-<H2><center><FONT COLOR=#0000cc>The feedback form on www.vedarahasya.net</center></h2>
-<!-- Start Bravenet.com Service Code -->
-<div align="center">
-<div style="border:1px solid #999999; width:255px; margin-bottom:5px;background-color:#F2F4FA;">
-<form action="http://pub26.bravenet.com/emailfwd/senddata.php" method="post" enctype="multipart/form-data" style="margin:0px;">
-<TABLE WIDTH="700" BORDER="0" CELLSPACING="15" CELLPADDING="5">
-<H4><LEFT><FONT COLOR=#0000cc>Thanks for taking the time to give your feedback! Just fill it up & click on "Send"...</LEFT></h4>
-<TR>
-<TD><FONT COLOR=#0000cc><B>Your Name:</B></font></td>
-<td><INPUT TYPE="text" NAME="name" SIZE="45"></TD>
-</tr>
-<tr>
-<TD><FONT COLOR=#0000cc><B>Your E-mail Address:</B></FONT></td>
-<td><INPUT TYPE="text" NAME="replymail" SIZE="45"></TD>
-</TR>
-<TR>
-<TD><FONT COLOR=#0000cc><B>How did you hear about our site?</B></font></td>
-<td><FONT COLOR=#0000cc><B><INPUT TYPE="radio" NAME="hear about" VALUE="A popular search engine">A search engine&nbsp;
-<INPUT TYPE="radio" NAME="hear about" VALUE="Link from another site">Link from another site<BR>
-<INPUT TYPE="radio" NAME="hear about" VALUE="From a friend">Heard from a friend</TD>
-</TR>
-<TR>
-<TD COLSPAN="2"><FONT FACE="ARIAL, HELVETICA" SIZE="-1" color=#0000cc align=left><B>If you have any comments or suggestions for our site please add them below:</B></FONT><BR>
-<TEXTAREA NAME="comments" COLS=75 ROWS=10></TEXTAREA></TD>
-</TR>
-</TABLE>
-<div align="right">
-<input type="submit" name="submit" value=" Send ">
-<input type="hidden" name="usernum" size="1" style="border: 0px solid black; height: 0px; width: 0px;" value="2188698670" /><input type="hidden" style="border: 0px solid black; height: 0px; width: 0px;" name="MAX_FILE_SIZE" value="2000000"><input type="hidden" style="border: 0px solid black; height: 0px; width: 0px;" name="cpv" value="2" />
-<input type="reset" name="reset" value=" Clear "></div>
-</form>
-<div align="right" style="margin: 5px;"><a title="Free Email Forms from Bravenet.com" href="http://www.bravenet.com" target="_blank"><img src="http://assets.bravenet.com/cp/bn-emailfwd.gif" alt="Free Email Forms from Bravenet.com" border="0"></a></div>
-</div>
-</div>
-<!-- End Bravenet.com Service Code -->
-<P ALIGN="CENTER"><A HREF="default.htm"><B><FONT SIZE=3>Click here to go back to the Home Page</B></FONT></A></P>
+    <div class="content">
+        <div class="section">
+            <h2>Feedback Form</h2>
+            <p>Thanks for taking the time to give your feedback! Please fill in the form and click <strong>Send</strong>.</p>
+
+            <form class="feedback-form" action="mailto:webmaster@vedarahasya.net" method="post" enctype="text/plain">
+                <label for="fb-name">Your Name:</label>
+                <input type="text" id="fb-name" name="name" placeholder="Your full name">
+
+                <label for="fb-email">Your E-mail Address:</label>
+                <input type="email" id="fb-email" name="email" placeholder="you@example.com">
+
+                <label>How did you hear about our site?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="source" value="search_engine"> A search engine</label>
+                    <label><input type="radio" name="source" value="link"> Link from another site</label>
+                    <label><input type="radio" name="source" value="friend"> Heard from a friend</label>
+                </div>
+
+                <label for="fb-comments">Comments / Suggestions:</label>
+                <textarea id="fb-comments" name="comments" placeholder="Your message&hellip;"></textarea>
+
+                <div class="btn-row">
+                    <button type="submit">Send</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="back-link"><a href="default.htm">&larr; Back to Home Page</a></div>
+    </div>
+
+    <footer class="site-footer">
+        &copy; P.K. Hari Hara Subramanian &mdash; <a href="contact.htm">Contact</a>
+    </footer>
+
+    <script src="harihjs.js"></script>
 </body>
 </html>

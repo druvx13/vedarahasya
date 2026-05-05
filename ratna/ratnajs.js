@@ -1,23 +1,19 @@
-var text="Welcome to Hari's Hinduism Site.This Site is best viewed with IE 5.0 & above."
-var speed=55
-var x=0
-function bb(){var a=text.substring(0,x)
-window.status=a
-if(x==text.length){x=0
-}else{x++}setTimeout("bb()",speed)
-}bb();
-
-function right(e) {
-   if (navigator.appName == 'Netscape' && 
-   (e.which == 3 || e.which == 2))
-   return false;
-   else if (navigator.appName == 'Microsoft Internet Explorer' && 
-   (event.button == 2 || event.button == 3)) {
-   alert("Sorry! This function is disabled in my site..");
-   return false;
-   }
-   return true;
-   }
-   document.onmousedown=right;
-   if (document.layers) window.captureEvents(Event.MOUSEDOWN);
-   window.onmousedown=right;
+// VedaRahasya.Net - Ratna section utilities
+(function () {
+    if (!document.querySelector('meta[name="viewport"]')) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0';
+        document.head.appendChild(meta);
+    }
+    if (!document.querySelector('link[href*="styles.css"]') &&
+        !document.querySelector('style[data-responsive="true"]')) {
+        var style = document.createElement('style');
+        style.setAttribute('data-responsive', 'true');
+        style.textContent =
+            '*,*::before,*::after{box-sizing:border-box;max-width:100%}' +
+            'body{overflow-x:hidden;margin:0;padding:0 8px;background:#fffde7}' +
+            'img{max-width:100%;height:auto}table{max-width:100%}';
+        document.head.appendChild(style);
+    }
+})();

@@ -1,25 +1,56 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Image Gallery @ Hari's Multi-Channel Portal</title>
-<style>
-  A:hover { text-decoration: none;
-	color: red;
-	font-family: Times New Roman }
-
-  A:link { ;
-	color: blue;
-	font-family: Times New Roman }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery &mdash; VedaRahasya.Net</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body link="#0000ff" vlink="#0000ff" bgcolor="#ffffcc" bgproperties="fixed">
-<script language="JavaScript" src="harihjs.js"></script>
-<u><b><font face="Arial,HELVETICA" size="4" color="#0000cc"><p align="CENTER">Welcome to Hari's Hinduism Images Gallery</p>
-</font></b></u>
-<p align="justify"><font color="#0000cc" size="3">I have made a collection of Hinduism related pictures from the web and put it all in one place here for easy viewing and downloading. Click on a category below to view the images. If you want to submit any photos to this page, contact me by clicking <a href="contact.htm">here</a>.</font></p>
-<p align="center"><b><br><br><img border="0" height="13" src="images/aniupd.gif" alt=''><a href="photos.htm">Some wonderful, rare images of Sri Maha Perival - now extensively updated</a><img border="0" height="13" src="images/aniupd.gif" alt=''>
-<br><br>
-<a href="ambapics.htm">Some beautiful images of Ambal</a></b></p><br><br>
-<p align="CENTER"><a href="ssaver.htm"><b><font size="3">Download Hindu Gods Screen Saver by clicking here</font></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="default.htm"><b><font size="3">Click here to go back to the Home Page</font></b></a></p>
+<body>
+    <header class="site-header">
+        <h1>VedaRahasya.Net</h1>
+        <p class="tagline">A portal on Hinduism &mdash; Vedas, Upanishads &amp; Sacred Scriptures</p>
+    </header>
+    <nav class="site-nav">
+        <a href="default.htm">Home</a>
+        <a href="vedbk.htm">Veda Rahasya</a>
+        <a href="vedas.htm">Upanishad Saaram</a>
+        <a href="imggal.htm">Image Gallery</a>
+        <a href="contact.htm">Contact</a>
+    </nav>
+
+    <div class="content">
+        <div class="section">
+            <h2 class="center">Hinduism Image Gallery</h2>
+            <p>
+                A collection of Hinduism-related pictures from the web, all in one place for easy
+                viewing and downloading. Click on a category below to view the images. If you want to
+                submit photos to this page, <a href="contact.htm">contact us</a>.
+            </p>
+
+            <div class="nav-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:20px;">
+                <div class="nav-card">
+                    <a href="photos.htm">
+                        <img src="images/aniupd.gif" alt="Updated" style="height:13px;vertical-align:middle;margin-right:4px;">
+                        Rare images of Sri Maha Perival
+                        <img src="images/aniupd.gif" alt="Updated" style="height:13px;vertical-align:middle;margin-left:4px;">
+                    </a>
+                </div>
+                <div class="nav-card"><a href="ambapics.htm">Beautiful images of Ambal</a></div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="ssaver.htm">Download Hindu Gods Screen Saver</a>
+            &nbsp;&nbsp;
+            <a href="default.htm">&larr; Back to Home Page</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        &copy; P.K. Hari Hara Subramanian &mdash; <a href="contact.htm">Contact</a>
+    </footer>
+
+    <script src="harihjs.js"></script>
 </body>
 </html>
